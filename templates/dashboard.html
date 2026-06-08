@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<style>
+body{font-family:Arial;background:#eef6ff;margin:0}
+.header{background:white;padding:20px;display:flex;justify-content:space-between}
+.card{background:white;margin:20px;padding:20px;border-radius:10px}
+</style>
+</head>
+<body>
+
+<div class="header">
+<a href="/">Home</a>
+<h2>Dashboard</h2>
+<a href="/logout">Logout</a>
+</div>
+
+<div class="card">
+<h3>Fraud Distribution</h3>
+{% if g1 %}
+<img src="data:image/png;base64,{{g1}}" width="400">
+{% endif %}
+</div>
+
+<div class="card">
+<h3>Claim Distribution</h3>
+{% if g2 %}
+<img src="data:image/png;base64,{{g2}}" width="400">
+{% endif %}
+</div>
+
+</body>
+</html>
